@@ -22,10 +22,8 @@ Release:
   tasks:
     - clean
     - script: |
-        #!/usr/env/bin bash
         echo "foobar a"
     - script: |
-        #!/usr/env/bin bash
         echo "foobar b"
         set -e
         sleep 100
