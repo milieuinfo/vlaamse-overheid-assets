@@ -22,16 +22,10 @@ Release:
   tasks:
     - clean
     - script: |
-        echo "foobar a"
-    - script: |
-        echo "foobar b"
         set -e
-        sleep 100
         /opt/scripts/git/git-repository-information-restore.sh
-        sleep 100
         export git_repo="${bamboo_repository_git_repositoryUrl}"
         export release_version="${bamboo.release_version}"
-        sleep 100
         docker-compose -f docker-compose-release.yml run release
   final-tasks:
     - script: /opt/scripts/docker/stop-docker-containers.sh
