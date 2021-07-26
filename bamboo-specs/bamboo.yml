@@ -23,7 +23,10 @@ Release:
     - clean
     - script: |
         #!/usr/env/bin bash
-        echo "foobar"
+        echo "foobar a"
+    - script: |
+        #!/usr/env/bin bash
+        echo "foobar b"
         set -e
         sleep 100
         /opt/scripts/git/git-repository-information-restore.sh
