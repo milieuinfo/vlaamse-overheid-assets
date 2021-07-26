@@ -23,10 +23,14 @@ Release:
     - clean
     - script: |
         #!/usr/env/bin bash
-        set -xv
+        set -e
+        echo "restore"
         /opt/scripts/git/git-repository-information-restore.sh
+        echo "export git_repo"
         export git_repo="${bamboo_repository_git_repositoryUrl}"
+        echo "export git_repo"
         export release_version="${bamboo.release_version}"
+        echo "docker-compose"
         docker-compose -f docker-compose-release.yml run release
   final-tasks:
     - script: /opt/scripts/docker/stop-docker-containers.sh
