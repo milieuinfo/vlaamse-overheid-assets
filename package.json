@@ -1,0 +1,21 @@
+{
+  "name": "vlaamse-overheid-assets",
+  "version": "1.0.0",
+  "description": "Vlaamse overheid's assets packaged for CDN deployment",
+  "scripts": {
+    "release": "np",
+    "release:prepare": "",
+    "release:testless": "np --yolo"
+  },
+  "author": "DIDM",
+  "devDependencies": {
+    "np": "3.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milieuinfo/vlaamse-overheid-assets.git"
+  },
+  "publishConfig": {
+    "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
+  }
+}
