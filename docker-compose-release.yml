@@ -1,7 +1,7 @@
 version: "3"
 services:
   release:
-    image: ${DOCKER_REGISTRY}milieuinfo/wc-release:1.0.2
+    image: ${DOCKER_REGISTRY}milieuinfo/ubuntu-node:14.18.3
     environment:
       - http_proxy=${http_proxy}
       - https_proxy=${https_proxy}
@@ -9,8 +9,14 @@ services:
       - HTTP_PROXY=${http_proxy}
       - HTTPS_PROXY=${https_proxy}
       - NO_PROXY=${no_proxy}
-      - GIT_REPO=${git_repo}
-      - RELEASE_VERSION=${release_version}
+      - artifactory_user=${artifactory_user}
+      - artifactory_password=${artifactory_password}
     extra_hosts:
       - "repository.milieuinfo.be:${REPOSITORY_FIXED_IP}"
+    working_dir: /data
+    volumes:
+      - ${HOME:-.}/.npmrc:/root/.npmrc:ro
+      - ${HOME:-.}/.gitconfig:/root/.gitconfig:ro
+      - ${HOME:-.}/.git-credentials:/root/.git-credentials:ro
+      - ..:/data
 
