@@ -2,11 +2,6 @@
   "name": "vl-vlaamse-overheid-assets",
   "version": "1.0.1",
   "description": "Vlaamse overheid's assets packaged for CDN deployment",
-  "scripts": {
-    "release": "np",
-    "release:prepare": "",
-    "release:testless": "np --yolo"
-  },
   "author": "DIDM",
   "repository": {
     "type": "git",
