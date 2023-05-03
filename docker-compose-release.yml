@@ -17,5 +17,5 @@ services:
       - ${HOME:-.}/.gitconfig:/root/.gitconfig:ro
       - ${HOME:-.}/.git-credentials:/root/.git-credentials:ro
       - .:/data
-    command: "npm install && npm run release"
+    command: sh -c "npm install && npm run release"
 
