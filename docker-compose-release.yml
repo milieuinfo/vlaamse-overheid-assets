@@ -18,6 +18,6 @@ services:
       - ${HOME:-.}/.npmrc:/root/.npmrc:ro
       - ${HOME:-.}/.gitconfig:/root/.gitconfig:ro
       - ${HOME:-.}/.git-credentials:/root/.git-credentials:ro
-      - ..:/data
+      - .:/data
     command: "npm run release"
 
