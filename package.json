@@ -8,9 +8,6 @@
     "release:testless": "np --yolo"
   },
   "author": "DIDM",
-  "devDependencies": {
-    "np": "7.7.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milieuinfo/vlaamse-overheid-assets.git"
